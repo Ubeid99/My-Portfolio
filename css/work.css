@@ -1,0 +1,244 @@
+
+body {
+    margin: 0;
+    background: #0E0C0A;
+    height: 750px;
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#headx{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #0E0C0A;
+    display: flex;
+    padding: 35px;
+    justify-content: space-between;
+    font-size: larger;
+    box-shadow: 1px 3px 2px 2px black;
+    z-index: 100;
+}
+
+.navbar{
+    margin-left: 40%;  
+}
+
+.navbar a{
+    text-decoration: none;
+    margin: 20px;
+    position: relative;   
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+.navbar a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+.logo{
+    text-decoration: none;
+    font-size: x-large;
+    position: relative;
+    margin-left: 7%;
+}
+
+    /* <<<Hamburger css for responsive look>>> */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+.sidenav a {
+    padding: 20px 20px 20px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    font-size:30px; 
+  }
+  
+
+  /* <<<Responsice media for moniles>>> */
+
+@media screen and (max-height: 500px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .sidenav{
+        display: visible;
+    }
+  }
+
+@media screen and (min-width: 1024px) {
+    .sidenav{
+        display: none;
+    }
+
+    .hide{
+        display: none;
+    }
+  }
+
+@media screen and (max-width: 500px) {
+
+    #headx{
+        width: 100%;
+        font-size: smaller;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .logo{
+        font-size: 30px;
+        margin-left: 1%;
+        margin-top: -5%;
+        
+    }
+    
+    .navbar{
+        display: none;
+    }
+}
+
+
+    /* <<<<work list here>>>> */
+.masonry { /* Masonry container */
+     position: relative;
+    -webkit-column-count: 4;
+    -moz-column-count:4;
+     column-count: 4;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+     column-gap: 1em;
+     margin: 4em;
+     padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+     column-gap: 1.5em;
+     margin-top: 10%;
+}
+
+@media screen and (max-width: 500px) {
+
+    .masonry{
+       top: 15%;
+    }
+    
+    body{
+        height: 690px;
+    }
+}
+
+
+.item {
+    display: inline-block;
+    background: #fff;
+    padding: 1.5em;
+    margin: 0 0 1.5em;
+    width: 100%;
+    -webkit-transition:1s ease all;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 3px 3px 5px 0 #ccc;
+}
+
+
+/* <<<<responsive code for work>>>> */
+
+.item img{max-width:100%;}
+
+@media only screen and (max-width: 320px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px){
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px){
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+@media only screen and (min-width: 1201px) {
+    .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+
+
+
+   
+    
+
+
+
+
+img{
+    --_g: 10% /45% 45% no-repeat linear-gradient(#000 0 0);
+    --m:
+      left   var(--_i,0%) top    var(--_g),
+      bottom var(--_i,0%) left   var(--_g),
+      top    var(--_i,0%) right  var(--_g),
+      right  var(--_i,0%) bottom var(--_g);
+    -webkit-mask: var(--m);
+            mask: var(--m);
+    filter: grayscale();
+    transition: .3s linear;
+    cursor: pointer;
+  }
+
+
+  img:hover {
+    --_i: 10%;
+    filter: grayscale(0);
+  }
