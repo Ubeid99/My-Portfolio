@@ -193,26 +193,24 @@ html{
 
   @media screen and (max-width: 550px)   {
 
-    .light{
+    /* .light{
       display: none;
-    }
+    } */
     
     .hovx{
       font-size: 4.5em;
-      padding-top: 60%;
+      padding-top: 50%;
       
     }
 
     .hov2{
-      font-size:2em;
-      margin-top: 7%;
-      margin-left: 9.5%;
+      font-size:2.2em;
+      margin-top: -5%;
+      margin-left: 13%;
     }
 
     .hov3{
-      font-size: 1.5em;
-      margin-top: -25.5%;
-      margin-left: 55%;
+     display: none;
     }
 
     .home{
@@ -423,7 +421,7 @@ html{
     }
     
     p{
-      margin-left: 3%;
+     padding-left: 4%;
     }
   }
 
